@@ -1,0 +1,33 @@
+<div class="main-page-container">
+  <nz-card>
+    <nz-divider nzText="YEAR" nzOrientation="left"></nz-divider>
+    <div class="year-select">
+      <nz-input-number style="width: 180px" [(ngModel)]="yearValue" [nzMin]="2017" [nzMax]="2050" [nzStep]="1"
+        [nzPlaceHolder]="'Select Year'" [nzSize]="'large'"></nz-input-number>
+    </div>
+    <nz-divider nzText="HEAD" nzOrientation="left"></nz-divider>
+    <div class="head-select">
+      <nz-select [(ngModel)]="selectedUser" (nzScrollToBottom)="loadMore()" nzPlaceHolder="Select Head" nzAllowClear
+        [nzSize]="'large'">
+        <nz-option *ngFor="let o of optionList" [nzValue]="o" [nzLabel]="o"></nz-option>
+        <nz-option *ngIf="isLoading" nzDisabled nzCustomContent>
+          <i nz-icon type="loading" class="loading-icon"></i> Loading Data...
+        </nz-option>
+      </nz-select>
+    </div>
+    <nz-divider nzText="PROGRAMME" nzOrientation="left"></nz-divider>
+    <div class="programme-select">
+      <nz-select [(ngModel)]="selectedUser" (nzScrollToBottom)="loadMore()" nzPlaceHolder="Select Programme"
+        nzAllowClear [nzSize]="'large'">
+        <nz-option *ngFor="let o of optionList" [nzValue]="o" [nzLabel]="o"></nz-option>
+        <nz-option *ngIf="isLoading" nzDisabled nzCustomContent>
+          <i nz-icon type="loading" class="loading-icon"></i> Loading Data...
+        </nz-option>
+      </nz-select>
+    </div>
+    <nz-divider></nz-divider>
+    <div class="select-button">
+      <button nz-button nzType="default" style="float: right">Submit</button>
+    </div>
+  </nz-card>
+</div>
