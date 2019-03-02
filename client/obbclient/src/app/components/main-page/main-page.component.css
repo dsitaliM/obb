@@ -1,0 +1,19 @@
+/* .nz-card {
+  align-items: center;
+} */
+
+.main-page-container {
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 160px;
+}
+
+.head-select nz-select {
+  width: 100%;
+  margin-top: 10px
+}
+
+.programme-select nz-select {
+  width: 100%;
+  margin-top: 10px
+}
